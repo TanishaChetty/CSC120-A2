@@ -50,6 +50,7 @@ class Computer:
 
         if new_os is not None:
             self.operating_system = new_os
+            print("OS is now", new_os)
             #changes os to new one
 
 
