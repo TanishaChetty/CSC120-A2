@@ -13,27 +13,26 @@ class ResaleShop:
          # You'll remove this when you fill out your constructor
 
     # What methods will you need?
+
+    #Buying a computer by adding it to inventory!
     def buy(self, computer: Computer):
-        self.inventory.append(computer) #add computer to inventory
+        self.inventory.append(computer)
         print(computer.description, "added to inventory")
 
-        #1. to call Computer (...) constructor
-        #   to create a new Computer instance
 
-        #2. call inventory.append(....) to add the
-        #   new Computer instance to the inventory
-
+    #Sells computer by removing it from inventory
     def sell(self, computer:Computer):
-        if computer is not None:
-            self.inventory.pop(0) #remove computer from inventory
+        if self.inventory.contains(computer):
+            self.inventory.pop(0)
             print("Item", computer.description, "sold!")
         else:
             print("Item", computer.description, "not found. Please select another item to sell.") #if computer isn't in inventory
 
     
+    #Print all the computers in the inventory
     def print_inventory(self):
         if self.inventory:
-            for computer in self.inventory: #print all the computers in the inventory
+            for computer in self.inventory:
                 print(computer.description)
         else:
             print("No inventory to display.") #no inventory!

@@ -28,14 +28,18 @@ class Computer:
          # You'll remove this when you fill out your constructor
 
     # What methods will you need?
+
+    #Updates price to new price
     def update_price(self, new_price:int):
-            self.price = new_price #updates price to new price
+            self.price = new_price
             print("The new price of this computer is", self.price)
 
+    #Updates os to new os
     def update_os(self, new_os:str):
-        self.operating_system = new_os #updates os to new os
+        self.operating_system = new_os
         print("Updating OS to", self.operating_system)
 
+    #Changes price based on what year it was made and also changes os
     def refurbish(self, new_os:str): 
         if self.year_made < 2000 :
             self.price = 0 
@@ -46,11 +50,9 @@ class Computer:
         else:
             self.price = 1000 
             print("Computer Refurbished. New price is", self.price)
-            #changes price based on what year it was made
 
         if new_os is not None:
             self.operating_system = new_os
             print("OS is now", new_os)
-            #changes os to new one
 
 
